@@ -1,0 +1,10 @@
+[package]
+name = "numba-test"
+version = "0.1.0"
+authors = ["Joshua L. Adelman <joshua.adelman@gmail.com>"]
+
+[dependencies]
+
+[lib]
+name = "numba_test"
+crate-type = ["dylib"]
