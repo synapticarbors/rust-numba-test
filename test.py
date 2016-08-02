@@ -20,7 +20,7 @@ def func(n):
 f_cfunc = nb.cfunc('float64(int64)', nopython=True)(func)
 f_nb = nb.jit(nopython=True)(func)
 
-print lib.rust_double_callback(f_cfunc.cffi, 4)
-print 2.0 * f_nb(4)
+print 'Result from Rust via CFFI: ', lib.rust_double_callback(f_cfunc.cffi, 4)
+print 'Result from Python:        ', 2.0 * f_nb(4)
 
 
